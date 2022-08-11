@@ -7,7 +7,7 @@ import 'package:projeto_final_flutter/data/usecases/signout/remote_sign_out_from
 import 'package:projeto_final_flutter/presentation/countries/countries_presenter.dart';
 import 'package:projeto_final_flutter/ui/countries/countries_screen.dart';
 
-import 'data/usecases/countries/remote_fetch_all_countries_test.dart';
+import '../../data/usecases/countries/remote_fetch_all_countries_test.dart';
 
 class FirebaseAuthMock extends Mock implements FirebaseAuth {
 

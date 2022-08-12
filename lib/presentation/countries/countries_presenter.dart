@@ -54,12 +54,6 @@ class CountriesPresenter extends GetxController {
         .contains(
         StringUtils.toNoPalatals(countryName.toLowerCase()).toLowerCase()))
         .toList();
-
-    /*if (dividas.length == 0) {
-      state = DividasAdapterState.LISTA_VAZIA;
-    } else {
-      state = DividasAdapterState.LISTA_CARREGADA;
-    }*/
   }
 
   void onItemListTapped(String countryName) async {

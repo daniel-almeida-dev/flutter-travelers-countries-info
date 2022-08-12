@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class RoundedSearchTextFormField extends StatelessWidget {
-  const RoundedSearchTextFormField({Key? key}) : super(key: key);
+  final Function(String) onTextChanged;
+
+  const RoundedSearchTextFormField({Key? key, required this.onTextChanged})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +14,7 @@ class RoundedSearchTextFormField extends StatelessWidget {
         elevation: 5,
         borderRadius: BorderRadius.circular(50),
         child: TextFormField(
-          onChanged: (valor) {},
+          onChanged: onTextChanged,
           keyboardType: TextInputType.text,
           style: const TextStyle(
             color: Color.fromARGB(255, 46, 165, 188),
@@ -24,21 +27,16 @@ class RoundedSearchTextFormField extends StatelessWidget {
             hintStyle: const TextStyle(color: Colors.grey),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(50),
-              borderSide: const BorderSide(
-                  color: Colors.grey,
-                  width: 0),
+              borderSide: const BorderSide(color: Colors.grey, width: 0),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(50),
-              borderSide: const BorderSide(
-                  color: Colors.grey,
-                  width: 0),
+              borderSide: const BorderSide(color: Colors.grey, width: 0),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(50),
               borderSide: const BorderSide(
-                  color: Color.fromARGB(255, 46, 165, 188),
-                  width: 0),
+                  color: Color.fromARGB(255, 46, 165, 188), width: 0),
             ),
             suffixIcon: const Icon(
               Icons.search_outlined,

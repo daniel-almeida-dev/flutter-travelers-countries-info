@@ -70,7 +70,7 @@ class CountriesScreen extends CommonScreen {
                       child: Center(
                         child: Visibility(
                           visible: loadingListState == LoadingState.loading ? false : true,
-                          child: RoundedSearchTextFormField(),
+                          child: RoundedSearchTextFormField(onTextChanged: presenter.filterCountries),
                         ),
                       ),
                     ),

@@ -56,7 +56,7 @@ class SignInPresenter extends GetxController {
       if (user == null) {
         errorMessage.value = 'Ocorreu um erro ao tentar realizar o login';
       } else {
-        Future.delayed(const Duration(milliseconds: 500), () {
+        Future.delayed(const Duration(milliseconds: 350), () {
           Get.offNamed(CountriesScreen.id);
         });
       }

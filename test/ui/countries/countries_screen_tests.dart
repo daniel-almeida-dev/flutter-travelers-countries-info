@@ -32,6 +32,6 @@ void main() {
   });
 
   test('Should have presenter', () async {
-    verify(() => sut.presenter;
+    verify(() => sut.presenter);
   });
 }
